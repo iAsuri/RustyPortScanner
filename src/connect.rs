@@ -15,7 +15,7 @@ pub async fn scan_port(ip: String, port: u16) {
                 Ok(read) => {
                     if read > 0 {
                         println!(
-                            "[RustyPort] Twisted Doornob [{}] and got flashed to a banner [{:?}]",
+                            "[RustyPort] Twisted Doornob [{}] and got flashed with a banner [{:?}]",
                             port,
                             String::from_utf8_lossy(&buf).trim_end_matches('\0') // trim off null bytes
                         );
