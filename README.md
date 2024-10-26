@@ -1,5 +1,3 @@
-# RustyPortScanner 🦀
-
 ## 📜 Overview
 
 Rusty Portscanner Is used to Scan A tcp port for a open connection or banner!
