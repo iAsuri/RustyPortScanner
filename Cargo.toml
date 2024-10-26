@@ -1,0 +1,8 @@
+[package]
+name = "rusty-portscanner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.91"
+tokio = {version = "1.41.0", features = ["full"]}
