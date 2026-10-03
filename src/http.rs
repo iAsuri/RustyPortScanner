@@ -4,7 +4,7 @@ use colored::*;
 use anyhow::Result;
 use reqwest::{ Client, StatusCode };
 
-const FAMOUS_ENDPOINTS: [&str; 15] = [
+const FAMOUS_ENDPOINTS: [&str; 22] = [
     "/api/v1/users",
     "/api/v2/auth/login",
     "/swagger-ui.html",
@@ -20,6 +20,13 @@ const FAMOUS_ENDPOINTS: [&str; 15] = [
     "/api/v1/health",
     "/v2/api-docs",
     "/api/v1/scrape",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/sitemap_index.xml",
+    "/sitemaps.xml",
+    "/rss.xml",
+    "/feed.xml",
+    "/atom.xml",
 ];
 
 pub async fn webcrawler(url: &str) -> Vec<String> {
@@ -37,7 +44,7 @@ pub async fn webcrawler(url: &str) -> Vec<String> {
         };
 
         let path = resp.url().path().to_string();
-        if resp.status() == StatusCode::OK && !uri.contains(&path){
+        if resp.status() == StatusCode::OK && !uri.contains(&path) {
             uri.push(path);
         }
     }
