@@ -8,4 +8,8 @@ lto = true
 
 [dependencies]
 anyhow = "1.0.91"
+colored = "3.1.1"
+futures = "0.3.34"
+reqwest = "0.13.5"
+strip-ansi-escapes = "0.2.1"
 tokio = {version = "1.41.0", features = ["full"]}
