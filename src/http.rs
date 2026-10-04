@@ -71,6 +71,7 @@ pub async fn check_http_service(ip: &String, port: &u16, webcrawl: bool) -> Resu
             port,
             service.blue().underline()
         );
+        return Ok(());
     }
 
     let endpoints = webcrawler(&format!("http://{}:{}", ip, port)).await;
